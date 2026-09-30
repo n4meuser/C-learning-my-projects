@@ -67,3 +67,4 @@ void funkcja (void)
 		
 	}
 }
+

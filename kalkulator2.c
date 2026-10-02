@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <inttypes.h>
 
 void funkcja (void);
 
@@ -9,13 +8,13 @@ int main(void)
 	int wynik;
 	do 
 	{
-		printf("Jeśli chcesz wyjść nacisnij 0\nJesli nie wciskij enter\n");
+		printf("Jeśli chcesz wyjść nacisnij 0\nJesli nie wpisz dowolna liczbe a potem to co chcesz obliczyc\nUWAGA w przypadku potegowania liczby musza byc dodatnie a wykładnik musi być całkowity!\n");
 		
 		funkcja(); 
 		
 		scanf("%d", &wynik);
 		
-	}while(wynik !=0);
+	}while(wynik);
 	
 }
 
@@ -58,6 +57,19 @@ void funkcja (void)
 				printf("Nie mozesz dzielić przez 0\n");
 				break;
 			}
+		}
+		
+		case '^': 
+		{
+			l2 = (int) l2;
+			float n=1;
+			for(int i=1;i<=l2;i++)
+			{
+				n=n*l1;
+			}
+			
+			printf("Wynik: %f\n", n);
+			break;
 		}
 		
 		default:
